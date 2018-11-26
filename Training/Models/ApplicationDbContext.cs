@@ -27,10 +27,11 @@ namespace Training.Models
             modelBuilder.HasPostgresExtension("hstore");
             modelBuilder.Entity<Entities.Training>().ForNpgsqlUseXminAsConcurrencyToken();
             modelBuilder.Entity<Entities.TrainingGroup>().ForNpgsqlUseXminAsConcurrencyToken();
-            modelBuilder.Entity<Entities.TrainingGroupTraining>().ForNpgsqlUseXminAsConcurrencyToken();
+            // modelBuilder.Entity<Entities.TrainingGroupTraining>().ForNpgsqlUseXminAsConcurrencyToken();
 
             // TrainingGroupTraining
-            modelBuilder.Entity<TrainingGroupTraining>().HasKey(sc => new { sc.TrainingId, sc.TrainingGroupId });
+            //modelBuilder.Entity<TrainingGroupTraining>().HasKey(sc => new { sc.TrainingId, sc.TrainingGroupId });
+
             // below lines don't necessary. They are needed just if fields named not "TrainingId" and "TrainingGroupId" (http://www.entityframeworktutorial.net/efcore/configure-many-to-many-relationship-in-ef-core.aspx)
             // modelBuilder.Entity<TrainingGroupTraining>().HasOne<TrainingGroup>(tg => tg.TrainingGroup).WithMany(t => t.TrainingGroupTraining).HasForeignKey(tg1 => tg1.TrainingGroupId);
             // modelBuilder.Entity<TrainingGroupTraining>().HasOne<Training>(tg => tg.Training).WithMany(t => t.TrainingGroupTraining).HasForeignKey(tg1 => tg1.TrainingId);
@@ -41,6 +42,6 @@ namespace Training.Models
 
         public DbSet<Entities.Training> Training { get; set; }
         public DbSet<Entities.TrainingGroup> TrainingGroup { get; set; }
-        public DbSet<Entities.TrainingGroupTraining> TrainingGroupTraining { get; set; }
+        // public DbSet<Entities.TrainingGroupTraining> TrainingGroupTraining { get; set; }
     }
 }

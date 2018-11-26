@@ -31,12 +31,15 @@ namespace Training.Processors
         }
         public async Task<List<Models.Entities.Training>> GetByGroupAsync(string Group)
         {
+            return null;
+            /*
             var tgt = Task.Run(() => _repo.TrainingGroupTraining.Where(y => y.TrainingGroup.Name == Group).FirstOrDefault()).Result;
             if (tgt != null)
             {
                 return await Task.Run( () => _repo.Training.Where(x => x.Id == tgt.TrainingId).ToList());
             }
             else return null;
+            */
         }
     }
 }

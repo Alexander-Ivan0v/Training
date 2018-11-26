@@ -11,6 +11,6 @@ namespace Training.Models
         }
         public IQueryable<Entities.Training> Training => _context.Training;
         public IQueryable<Entities.TrainingGroup> TrainingGroup => _context.TrainingGroup;
-        public IQueryable<Entities.TrainingGroupTraining> TrainingGroupTraining => _context.TrainingGroupTraining;
+        // public IQueryable<Entities.TrainingGroupTraining> TrainingGroupTraining => _context.TrainingGroupTraining;
     }
 }

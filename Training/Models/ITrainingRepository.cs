@@ -6,6 +6,6 @@ namespace Training.Models
     {
         IQueryable<Entities.Training> Training { get; }
         IQueryable<Entities.TrainingGroup> TrainingGroup { get; }
-        IQueryable<Entities.TrainingGroupTraining> TrainingGroupTraining { get; }
+        // IQueryable<Entities.TrainingGroupTraining> TrainingGroupTraining { get; }
     }
 }

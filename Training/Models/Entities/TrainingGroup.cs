@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Training.Models.Entities
 {
-    public class TrainingGroup
+    public class TrainingGroup : IVersionedEntity
     {
         private readonly IList<Training> _training = new List<Training>();
 
@@ -19,11 +19,14 @@ namespace Training.Models.Entities
         [ConcurrencyCheck]
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         //[NotMapped] 
-        public virtual string Version { get; set; }
+        public virtual uint xmin { get; set; }
 
         public IList<Training> Training
         {
             get { return _training; }
         }
+        
+        // For EF (Migration)
+        // public IList<TrainingGroupTraining> TrainingGroupTraining { get; set; }
     }
 }

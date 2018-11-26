@@ -1,12 +1,16 @@
-﻿using AutoMapper;
+﻿using FluentNHibernate.Mapping;
 
 namespace Training.Models.Entities.Map
 {
-    public class TrainingMap : Profile
+    public class TrainingMap : ClassMap<Entities.Training>
     {   
         public TrainingMap()
         {
-            CreateMap<Entities.Training, Views.Training>(); //.ConvertUsing<TrainingMapConverter>();
+            Id(x => x.Id);
+            Map(x => x.Name).Not.Nullable();
+            Map(x => x.Descr).Not.Nullable();
+            Map(x => x.Program).Nullable();
+            Map(x => x.Duration).Not.Nullable();
         }
     }
 }

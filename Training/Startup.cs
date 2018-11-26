@@ -100,11 +100,17 @@ namespace Training
               });
             // -----------------------------------------------
 
+            // ------------- Add AutoMapper ----------------
+            var mappingConfig = new MapperConfiguration(mc => {mc.AddProfile(new MappingProfile());});
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
+            mapper.ConfigurationProvider.AssertConfigurationIsValid();
+            // ---------------------------------------------
+
             // ---------- Database ---------------
             services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(Configuration["Data:Training:ConnectionString"]));
             services.AddTransient<ITrainingRepository, EFTrainingRepository>();
             // -----------------------------------
-            services.AddAutoMapper();
 
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -137,7 +143,7 @@ namespace Training
             app.UseMvcWithDefaultRoute();
 
             // Initiate Data if they are don't exist
-            InitialData.EnsureInitiated(app);
+            // InitialData.EnsureInitiated(app);
         }
     }
 }
