@@ -1,6 +1,7 @@
 ﻿// http://www.entityframeworktutorial.net/efcore/configure-many-to-many-relationship-in-ef-core.aspx
 // http://www.entityframeworktutorial.net/efcore/configure-one-to-many-relationship-using-fluent-api-in-ef-core.aspx
 
+using FluentNHibernate.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,14 @@ namespace Training.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // https://www.npgsql.org/efcore/misc.html
+            // Optimistic Concurrency and Concurrency Tokens
+            // Use concurrency tokens (xmin)
+            modelBuilder.HasPostgresExtension("hstore");
+            modelBuilder.Entity<Entities.Training>().ForNpgsqlUseXminAsConcurrencyToken();
+            modelBuilder.Entity<Entities.TrainingGroup>().ForNpgsqlUseXminAsConcurrencyToken();
+            modelBuilder.Entity<Entities.TrainingGroupTraining>().ForNpgsqlUseXminAsConcurrencyToken();
+
             // TrainingGroupTraining
             modelBuilder.Entity<TrainingGroupTraining>().HasKey(sc => new { sc.TrainingId, sc.TrainingGroupId });
             // below lines don't necessary. They are needed just if fields named not "TrainingId" and "TrainingGroupId" (http://www.entityframeworktutorial.net/efcore/configure-many-to-many-relationship-in-ef-core.aspx)

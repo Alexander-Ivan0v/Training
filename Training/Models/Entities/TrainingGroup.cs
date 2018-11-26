@@ -10,10 +10,20 @@ namespace Training.Models.Entities
 {
     public class TrainingGroup
     {
+        private readonly IList<Training> _training = new List<Training>();
+
         [Key]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
         [Required]
-        public string Name { get; set; }
-        public IList<TrainingGroupTraining> TrainingGroupTraining { get; set; }
+        public virtual string Name { get; set; }
+        [ConcurrencyCheck]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        //[NotMapped] 
+        public virtual string Version { get; set; }
+
+        public IList<Training> Training
+        {
+            get { return _training; }
+        }
     }
 }

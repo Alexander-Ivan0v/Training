@@ -10,15 +10,17 @@ namespace Training.Models.Entities
     public class Training
     {
         [Key]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
         [Required]
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
         [Required]
-        public string Descr { get; set; }        
-        public string Program { get; set; }
+        public virtual string Descr { get; set; }        
+        public virtual string Program { get; set; }
         [Required]
-        public int Duration { get; set; }
-
-        public IList<TrainingGroupTraining> TrainingGroupTraining { get; set; }
+        public virtual int Duration { get; set; }
+        [ConcurrencyCheck]
+        [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        //[NotMapped] 
+        public virtual string Version { get; set; }
     }
 }
