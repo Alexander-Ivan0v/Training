@@ -1,0 +1,10 @@
+POST http://localhost:5000/api/v1/auth HTTP/1.1
+User-Agent: Fiddler
+Content-Type: text/json
+Host: localhost:5000
+Content-Length: 0
+
+{
+               "login" : "alexander.ivanov",
+               "pass" : ">Qn4FMJ3)0"
+}

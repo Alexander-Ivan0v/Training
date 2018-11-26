@@ -1,0 +1,280 @@
+2018-11-21 17:31:26,007 [1] DEBUG App  Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,034 [1] DEBUG App  Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,037 [1] DEBUG App  Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,050 [1] DEBUG App  Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,054 [1] DEBUG App  Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using compatibility value MalformedInputExceptions for version Version_2_1 
+2018-11-21 17:31:26,062 [1] DEBUG App  Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,103 [1] DEBUG App  Compatibility switch AllowAreas in type RazorPagesOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,114 [1] DEBUG App  Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,144 [1] DEBUG App  Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:31:26,205 [1] DEBUG App  Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2018-11-21 17:31:26,245 [1] DEBUG App  Failed to locate the development https certificate at '(null)'. 
+2018-11-21 17:31:26,343 [1] DEBUG App  Using development certificate: CN=localhost (Thumbprint: 2E7BCC041EF36E6BF89BC832B532F37F2C6056CB) 
+2018-11-21 17:31:26,418 [1] DEBUG App  Hosting started 
+2018-11-21 17:31:26,423 [1] DEBUG App  Loaded hosting startup assembly Training 
+2018-11-21 17:31:26,676 [4] DEBUG App  Connection id "0HLIFNO2GPLDB" started. 
+2018-11-21 17:31:26,707 [4] DEBUG App  Connection id "0HLIFNO2GPLDB" received FIN. 
+2018-11-21 17:31:26,730 [10] DEBUG App  Connection id "0HLIFNO2GPLDB" sending FIN. 
+2018-11-21 17:31:26,989 [6] DEBUG App  Failed to authenticate HTTPS connection. 
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-21 17:31:27,131 [6] DEBUG App  Connection id "0HLIFNO2GPLDB" stopped. 
+2018-11-21 17:31:27,466 [8] DEBUG App  Connection id "0HLIFNO2GPLDC" started. 
+2018-11-21 17:31:27,638 [6] INFO  App  Request starting HTTP/1.1 GET https://localhost:5001/api/values   
+2018-11-21 17:31:27,652 [6] DEBUG App  Wildcard detected, all requests with hosts will be allowed. 
+2018-11-21 17:31:27,656 [6] TRACE App  All hosts are allowed. 
+2018-11-21 17:31:27,693 [6] DEBUG App  The request path /api/values does not match a supported file type 
+2018-11-21 17:31:27,756 [6] DEBUG App  AuthenticationScheme: Bearer was not authenticated. 
+2018-11-21 17:31:27,884 [6] DEBUG App  Request successfully matched the route with name '(null)' and template 'api/Values'. 
+2018-11-21 17:31:27,896 [6] DEBUG App  Action 'Training.Controllers.ValuesController.Post (Training)' with id '8abdfcc9-845b-470f-b11b-4fa50dc738c9' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2018-11-21 17:31:27,916 [6] INFO  App  Route matched with {action = "Get", controller = "Values"}. Executing action Training.Controllers.ValuesController.Get (Training) 
+2018-11-21 17:31:27,922 [6] DEBUG App  Execution plan of authorization filters (in the following order): None 
+2018-11-21 17:31:27,925 [6] DEBUG App  Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:31:27,928 [6] DEBUG App  Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter 
+2018-11-21 17:31:27,931 [6] DEBUG App  Execution plan of exception filters (in the following order): None 
+2018-11-21 17:31:27,934 [6] DEBUG App  Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:31:27,939 [6] TRACE App  Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:27,944 [6] TRACE App  Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:27,950 [6] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:31:27,954 [6] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:31:27,958 [6] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:31:27,961 [6] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:31:28,043 [6] INFO  App  Executing action method Training.Controllers.ValuesController.Get (Training) - Validation state: Valid 
+2018-11-21 17:31:28,048 [6] INFO  App  Executed action method Training.Controllers.ValuesController.Get (Training), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.3615ms. 
+2018-11-21 17:31:28,052 [6] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:31:28,055 [6] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:31:28,059 [6] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:31:28,063 [6] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:31:28,071 [6] TRACE App  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:28,080 [6] TRACE App  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:28,087 [6] TRACE App  Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2018-11-21 17:31:28,092 [6] DEBUG App  List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter 
+2018-11-21 17:31:28,097 [6] DEBUG App  No information found on request to perform content negotiation. 
+2018-11-21 17:31:28,100 [6] DEBUG App  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2018-11-21 17:31:28,104 [6] DEBUG App  Attempting to select the first formatter in the output formatters list which can write the result. 
+2018-11-21 17:31:28,107 [6] DEBUG App  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2018-11-21 17:31:28,110 [6] INFO  App  Executing ObjectResult, writing value of type 'System.String[]'. 
+2018-11-21 17:31:28,177 [6] TRACE App  After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2018-11-21 17:31:28,188 [6] TRACE App  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:28,214 [6] TRACE App  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:28,228 [6] TRACE App  Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:28,236 [6] TRACE App  Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:31:28,247 [6] INFO  App  Executed action Training.Controllers.ValuesController.Get (Training) in 303.3068ms 
+2018-11-21 17:31:28,276 [6] DEBUG App  Connection id "0HLIFNO2GPLDC" completed keep alive response. 
+2018-11-21 17:31:28,336 [6] INFO  App  Request finished in 645.7723ms 200 application/json; charset=utf-8 
+2018-11-21 17:32:20,002 [14] DEBUG App  Connection id "0HLIFNO2GPLDD" started. 
+2018-11-21 17:32:20,054 [6] INFO  App  Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth text/json 84 
+2018-11-21 17:32:20,059 [6] TRACE App  All hosts are allowed. 
+2018-11-21 17:32:20,063 [6] DEBUG App  POST requests are not supported 
+2018-11-21 17:32:20,083 [6] DEBUG App  AuthenticationScheme: Bearer was not authenticated. 
+2018-11-21 17:32:20,093 [6] DEBUG App  Request successfully matched the route with name '(null)' and template 'api/v1/Auth'. 
+2018-11-21 17:32:20,111 [6] INFO  App  Route matched with {action = "Auth", controller = "Auth"}. Executing action Training.Controllers.AuthController.Auth (Training) 
+2018-11-21 17:32:20,116 [6] DEBUG App  Execution plan of authorization filters (in the following order): None 
+2018-11-21 17:32:20,120 [6] DEBUG App  Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:32:20,124 [6] DEBUG App  Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter 
+2018-11-21 17:32:20,133 [6] DEBUG App  Execution plan of exception filters (in the following order): None 
+2018-11-21 17:32:20,137 [6] DEBUG App  Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:32:20,141 [6] TRACE App  Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:20,145 [6] TRACE App  Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:20,167 [6] DEBUG App  Attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData' ... 
+2018-11-21 17:32:20,172 [6] DEBUG App  Attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData' using the name '' in request data ... 
+2018-11-21 17:32:20,175 [6] DEBUG App  Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'text/json'. 
+2018-11-21 17:32:20,178 [6] DEBUG App  Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'text/json'. 
+2018-11-21 17:32:20,203 [6] DEBUG App  Connection id "0HLIFNO2GPLDD", Request id "0HLIFNO2GPLDD:00000001": started reading request body. 
+2018-11-21 17:32:20,210 [6] DEBUG App  Connection id "0HLIFNO2GPLDD", Request id "0HLIFNO2GPLDD:00000001": done reading request body. 
+2018-11-21 17:32:20,224 [6] DEBUG App  Done attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData'. 
+2018-11-21 17:32:20,227 [6] DEBUG App  Done attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData'. 
+2018-11-21 17:32:20,231 [6] DEBUG App  Attempting to validate the bound parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData' ... 
+2018-11-21 17:32:20,247 [6] DEBUG App  Done attempting to validate the bound parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData'. 
+2018-11-21 17:32:20,252 [6] TRACE App  Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter. 
+2018-11-21 17:32:20,260 [6] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:32:20,264 [6] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:32:20,269 [6] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:32:20,272 [6] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:32:20,299 [6] INFO  App  Executing action method Training.Controllers.AuthController.Auth (Training) with arguments (Training.Tools.ControllersInput.AuthData) - Validation state: Valid 
+2018-11-21 17:32:20,300 [6] INFO  App  sdfadasdasdasd 
+2018-11-21 17:32:26,736 [17] DEBUG App  Connection id "0HLIFNO2GPLDC" received FIN. 
+2018-11-21 17:32:26,745 [18] DEBUG App  Connection id "0HLIFNO2GPLDC" disconnecting. 
+2018-11-21 17:32:26,750 [19] DEBUG App  Connection id "0HLIFNO2GPLDC" sending FIN. 
+2018-11-21 17:32:26,754 [18] DEBUG App  Connection id "0HLIFNO2GPLDC" stopped. 
+2018-11-21 17:32:27,158 [6] INFO  App  Executed action method Training.Controllers.AuthController.Auth (Training), returned result Microsoft.AspNetCore.Mvc.UnauthorizedResult in 6855.8474ms. 
+2018-11-21 17:32:27,162 [6] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:32:27,166 [6] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:32:27,169 [6] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:32:27,173 [6] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:32:27,176 [6] TRACE App  Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter. 
+2018-11-21 17:32:27,180 [6] TRACE App  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:27,187 [6] TRACE App  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:27,190 [6] TRACE App  Before executing action result Microsoft.AspNetCore.Mvc.UnauthorizedResult. 
+2018-11-21 17:32:27,208 [6] INFO  App  Executing HttpStatusCodeResult, setting HTTP status code 401 
+2018-11-21 17:32:27,210 [6] TRACE App  After executing action result Microsoft.AspNetCore.Mvc.UnauthorizedResult. 
+2018-11-21 17:32:27,214 [6] TRACE App  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:27,218 [6] TRACE App  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:27,222 [6] TRACE App  Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:27,226 [6] TRACE App  Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:32:27,229 [6] INFO  App  Executed action Training.Controllers.AuthController.Auth (Training) in 7088.7981ms 
+2018-11-21 17:32:27,236 [6] DEBUG App  Connection id "0HLIFNO2GPLDD" completed keep alive response. 
+2018-11-21 17:32:27,242 [6] INFO  App  Request finished in 7186.2615ms 401 text/plain 
+2018-11-21 17:36:29,584 [1] DEBUG App  Compatibility switch AllowInputFormatterExceptionMessages in type MvcJsonOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,618 [1] DEBUG App  Compatibility switch AllowCombiningAuthorizeFilters in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,628 [1] DEBUG App  Compatibility switch AllowBindingHeaderValuesToNonStringModelTypes in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,630 [1] DEBUG App  Compatibility switch AllowValidatingTopLevelNodes in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,633 [1] DEBUG App  Compatibility switch InputFormatterExceptionPolicy in type MvcOptions is using compatibility value MalformedInputExceptions for version Version_2_1 
+2018-11-21 17:36:29,635 [1] DEBUG App  Compatibility switch SuppressBindingUndefinedValueToEnumType in type MvcOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,659 [1] DEBUG App  Compatibility switch AllowAreas in type RazorPagesOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,661 [1] DEBUG App  Compatibility switch AllowMappingHeadRequestsToGetHandler in type RazorPagesOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,687 [1] DEBUG App  Compatibility switch SuppressTempDataAttributePrefix in type MvcViewOptions is using compatibility value True for version Version_2_1 
+2018-11-21 17:36:29,727 [1] DEBUG App  Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider 
+2018-11-21 17:36:29,759 [1] DEBUG App  Failed to locate the development https certificate at '(null)'. 
+2018-11-21 17:36:29,842 [1] DEBUG App  Using development certificate: CN=localhost (Thumbprint: 2E7BCC041EF36E6BF89BC832B532F37F2C6056CB) 
+2018-11-21 17:36:29,885 [1] DEBUG App  Hosting started 
+2018-11-21 17:36:29,888 [1] DEBUG App  Loaded hosting startup assembly Training 
+2018-11-21 17:36:29,994 [4] DEBUG App  Connection id "0HLIFNQSTFESN" started. 
+2018-11-21 17:36:29,995 [3] DEBUG App  Connection id "0HLIFNQSTFESM" started. 
+2018-11-21 17:36:30,026 [3] DEBUG App  Connection id "0HLIFNQSTFESM" received FIN. 
+2018-11-21 17:36:30,027 [4] DEBUG App  Connection id "0HLIFNQSTFESN" received FIN. 
+2018-11-21 17:36:30,047 [12] DEBUG App  Connection id "0HLIFNQSTFESN" sending FIN. 
+2018-11-21 17:36:30,181 [12] DEBUG App  Connection id "0HLIFNQSTFESM" sending FIN. 
+2018-11-21 17:36:30,311 [10] DEBUG App  Failed to authenticate HTTPS connection. 
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-21 17:36:30,313 [6] DEBUG App  Failed to authenticate HTTPS connection. 
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2018-11-21 17:36:30,330 [10] DEBUG App  Connection id "0HLIFNQSTFESM" stopped. 
+2018-11-21 17:36:30,343 [6] DEBUG App  Connection id "0HLIFNQSTFESN" stopped. 
+2018-11-21 17:36:31,016 [4] DEBUG App  Connection id "0HLIFNQSTFESO" started. 
+2018-11-21 17:36:31,177 [10] INFO  App  Request starting HTTP/1.1 GET https://localhost:5001/api/values   
+2018-11-21 17:36:31,181 [10] DEBUG App  Wildcard detected, all requests with hosts will be allowed. 
+2018-11-21 17:36:31,185 [10] TRACE App  All hosts are allowed. 
+2018-11-21 17:36:31,217 [10] DEBUG App  The request path /api/values does not match a supported file type 
+2018-11-21 17:36:31,295 [10] DEBUG App  AuthenticationScheme: Bearer was not authenticated. 
+2018-11-21 17:36:31,431 [10] DEBUG App  Request successfully matched the route with name '(null)' and template 'api/Values'. 
+2018-11-21 17:36:31,443 [10] DEBUG App  Action 'Training.Controllers.ValuesController.Post (Training)' with id '5bd19246-88d6-48e9-8ad4-4433b9bf37c5' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2018-11-21 17:36:31,463 [10] INFO  App  Route matched with {action = "Get", controller = "Values"}. Executing action Training.Controllers.ValuesController.Get (Training) 
+2018-11-21 17:36:31,467 [10] DEBUG App  Execution plan of authorization filters (in the following order): None 
+2018-11-21 17:36:31,471 [10] DEBUG App  Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:36:31,477 [10] DEBUG App  Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter 
+2018-11-21 17:36:31,489 [10] DEBUG App  Execution plan of exception filters (in the following order): None 
+2018-11-21 17:36:31,491 [10] DEBUG App  Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:36:31,496 [10] TRACE App  Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,500 [10] TRACE App  Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,508 [10] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:31,517 [10] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:31,523 [10] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:31,539 [10] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:31,618 [10] INFO  App  Executing action method Training.Controllers.ValuesController.Get (Training) - Validation state: Valid 
+2018-11-21 17:36:31,623 [10] INFO  App  Executed action method Training.Controllers.ValuesController.Get (Training), returned result Microsoft.AspNetCore.Mvc.ObjectResult in 0.3815ms. 
+2018-11-21 17:36:31,629 [10] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:31,631 [10] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:31,634 [10] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:31,638 [10] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:31,643 [10] TRACE App  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,645 [10] TRACE App  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,652 [10] TRACE App  Before executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2018-11-21 17:36:31,657 [10] DEBUG App  List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter 
+2018-11-21 17:36:31,663 [10] DEBUG App  No information found on request to perform content negotiation. 
+2018-11-21 17:36:31,666 [10] DEBUG App  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2018-11-21 17:36:31,668 [10] DEBUG App  Attempting to select the first formatter in the output formatters list which can write the result. 
+2018-11-21 17:36:31,673 [10] DEBUG App  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2018-11-21 17:36:31,675 [10] INFO  App  Executing ObjectResult, writing value of type 'System.String[]'. 
+2018-11-21 17:36:31,746 [10] TRACE App  After executing action result Microsoft.AspNetCore.Mvc.ObjectResult. 
+2018-11-21 17:36:31,750 [10] TRACE App  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,765 [10] TRACE App  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,793 [10] TRACE App  Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,816 [10] TRACE App  Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:31,911 [10] INFO  App  Executed action Training.Controllers.ValuesController.Get (Training) in 339.3122ms 
+2018-11-21 17:36:31,940 [10] DEBUG App  Connection id "0HLIFNQSTFESO" completed keep alive response. 
+2018-11-21 17:36:32,044 [10] INFO  App  Request finished in 772.708ms 200 application/json; charset=utf-8 
+2018-11-21 17:36:37,001 [3] DEBUG App  Connection id "0HLIFNQSTFESP" started. 
+2018-11-21 17:36:37,007 [7] INFO  App  Request starting HTTP/1.1 POST http://localhost:5000/api/v1/auth text/json 90 
+2018-11-21 17:36:37,020 [7] TRACE App  All hosts are allowed. 
+2018-11-21 17:36:37,023 [7] DEBUG App  POST requests are not supported 
+2018-11-21 17:36:37,048 [7] DEBUG App  AuthenticationScheme: Bearer was not authenticated. 
+2018-11-21 17:36:37,056 [7] DEBUG App  Request successfully matched the route with name '(null)' and template 'api/v1/Auth'. 
+2018-11-21 17:36:37,073 [7] INFO  App  Route matched with {action = "Auth", controller = "Auth"}. Executing action Training.Controllers.AuthController.Auth (Training) 
+2018-11-21 17:36:37,084 [7] DEBUG App  Execution plan of authorization filters (in the following order): None 
+2018-11-21 17:36:37,089 [7] DEBUG App  Execution plan of resource filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:36:37,092 [7] DEBUG App  Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter (Order: -2147483648), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter 
+2018-11-21 17:36:37,098 [7] DEBUG App  Execution plan of exception filters (in the following order): None 
+2018-11-21 17:36:37,103 [7] DEBUG App  Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter 
+2018-11-21 17:36:37,107 [7] TRACE App  Resource Filter: Before executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:37,113 [7] TRACE App  Resource Filter: After executing OnResourceExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:37,127 [7] DEBUG App  Attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData' ... 
+2018-11-21 17:36:37,132 [7] DEBUG App  Attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData' using the name '' in request data ... 
+2018-11-21 17:36:37,135 [7] DEBUG App  Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonPatchInputFormatter' for content type 'text/json'. 
+2018-11-21 17:36:37,139 [7] DEBUG App  Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'text/json'. 
+2018-11-21 17:36:37,148 [7] DEBUG App  Connection id "0HLIFNQSTFESP", Request id "0HLIFNQSTFESP:00000001": started reading request body. 
+2018-11-21 17:36:37,156 [7] DEBUG App  Connection id "0HLIFNQSTFESP", Request id "0HLIFNQSTFESP:00000001": done reading request body. 
+2018-11-21 17:36:37,174 [7] DEBUG App  Done attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData'. 
+2018-11-21 17:36:37,177 [7] DEBUG App  Done attempting to bind parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData'. 
+2018-11-21 17:36:37,180 [7] DEBUG App  Attempting to validate the bound parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData' ... 
+2018-11-21 17:36:37,188 [7] DEBUG App  Done attempting to validate the bound parameter 'auth' of type 'Training.Tools.ControllersInput.AuthData'. 
+2018-11-21 17:36:37,192 [7] TRACE App  Action Filter: Before executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter. 
+2018-11-21 17:36:37,197 [7] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:37,199 [7] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:37,202 [7] TRACE App  Action Filter: Before executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:37,205 [7] TRACE App  Action Filter: After executing OnActionExecuting on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:37,230 [7] INFO  App  Executing action method Training.Controllers.AuthController.Auth (Training) with arguments (Training.Tools.ControllersInput.AuthData) - Validation state: Valid 
+2018-11-21 17:36:37,231 [7] INFO  App  sdfadasdasdasd 
+2018-11-21 17:36:39,826 [7] INFO  App  Executed action method Training.Controllers.AuthController.Auth (Training), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2593.3718ms. 
+2018-11-21 17:36:39,830 [7] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:39,838 [7] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter. 
+2018-11-21 17:36:39,842 [7] TRACE App  Action Filter: Before executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:39,846 [7] TRACE App  Action Filter: After executing OnActionExecuted on filter Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter. 
+2018-11-21 17:36:39,854 [7] TRACE App  Action Filter: After executing OnActionExecutionAsync on filter Microsoft.AspNetCore.Mvc.Internal.ControllerActionFilter. 
+2018-11-21 17:36:39,858 [7] TRACE App  Result Filter: Before executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:39,860 [7] TRACE App  Result Filter: After executing OnResultExecuting on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:39,872 [7] TRACE App  Before executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2018-11-21 17:36:39,879 [7] DEBUG App  List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter 
+2018-11-21 17:36:39,884 [7] DEBUG App  No information found on request to perform content negotiation. 
+2018-11-21 17:36:39,889 [7] DEBUG App  Attempting to select an output formatter without using a content type as no explicit content types were specified for the response. 
+2018-11-21 17:36:39,892 [7] DEBUG App  Attempting to select the first formatter in the output formatters list which can write the result. 
+2018-11-21 17:36:39,896 [7] DEBUG App  Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2018-11-21 17:36:39,902 [7] INFO  App  Executing ObjectResult, writing value of type 'Training.Tools.ControllersOutput.OutputToken'. 
+2018-11-21 17:36:39,908 [7] TRACE App  After executing action result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2018-11-21 17:36:39,912 [7] TRACE App  Result Filter: Before executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:39,916 [7] TRACE App  Result Filter: After executing OnResultExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:39,921 [7] TRACE App  Resource Filter: Before executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:39,925 [7] TRACE App  Resource Filter: After executing OnResourceExecuted on filter Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.SaveTempDataFilter. 
+2018-11-21 17:36:39,928 [7] INFO  App  Executed action Training.Controllers.AuthController.Auth (Training) in 2821.7047ms 
+2018-11-21 17:36:39,941 [7] DEBUG App  Connection id "0HLIFNQSTFESP" completed keep alive response. 
+2018-11-21 17:36:39,944 [7] INFO  App  Request finished in 2936.9862ms 200 application/json; charset=utf-8 
+2018-11-21 17:36:44,388 [6] DEBUG App  Connection id "0HLIFNQSTFESO" received FIN. 
+2018-11-21 17:36:44,393 [7] DEBUG App  Connection id "0HLIFNQSTFESO" disconnecting. 
+2018-11-21 17:36:44,400 [7] DEBUG App  Connection id "0HLIFNQSTFESO" sending FIN. 
+2018-11-21 17:36:44,404 [6] DEBUG App  Connection id "0HLIFNQSTFESO" stopped. 
+2018-11-21 17:37:39,979 [7] DEBUG App  Hosting shutdown 
+2018-11-21 17:37:40,172 [7] DEBUG App  Connection id "0HLIFNQSTFESP" disconnecting. 
+2018-11-21 17:37:40,185 [7] DEBUG App  Connection id "0HLIFNQSTFESP" sending FIN. 
+2018-11-21 17:37:40,248 [20] DEBUG App  Connection id "0HLIFNQSTFESP" stopped. 
