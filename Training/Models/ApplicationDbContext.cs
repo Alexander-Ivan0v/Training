@@ -21,13 +21,14 @@ namespace Training.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // ---------- Use concurrency tokens (xmin) ---------------
             // https://www.npgsql.org/efcore/misc.html
             // Optimistic Concurrency and Concurrency Tokens
-            // Use concurrency tokens (xmin)
             modelBuilder.HasPostgresExtension("hstore");
             modelBuilder.Entity<Entities.Training>().ForNpgsqlUseXminAsConcurrencyToken();
             modelBuilder.Entity<Entities.TrainingGroup>().ForNpgsqlUseXminAsConcurrencyToken();
             // modelBuilder.Entity<Entities.TrainingGroupTraining>().ForNpgsqlUseXminAsConcurrencyToken();
+            // --------------------------------------------------------
 
             // TrainingGroupTraining
             //modelBuilder.Entity<TrainingGroupTraining>().HasKey(sc => new { sc.TrainingId, sc.TrainingGroupId });
